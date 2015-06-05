@@ -11,16 +11,14 @@ module Hashrush
       end
       return hash
     end
+    
+    def self.rush(binding, *args)
+      Hash.build_from_symbol_variables(binding, args)  
+    end
   end
 
 end
 
-module Kernel
-  # def is_variable?(sym)
-  #   puts defined?(a)
-  #   puts defined?(c)
-  #   defined?(eval("#{sym.to_s}")).include?("variable")
-  # end
-end
+
 
 
