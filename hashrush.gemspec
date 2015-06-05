@@ -6,7 +6,7 @@ require 'hashrush/version'
 Gem::Specification.new do |spec|
   spec.name          = "hashrush"
   spec.date          = Date.today.to_s
-  spec.version       = Hashrush::VERSION
+  spec.version       = "1.0.0"
   spec.authors       = ["Epigene"]
   spec.email         = ["augusts.bautra@gmail.com"]
 
