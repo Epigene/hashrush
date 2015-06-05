@@ -32,6 +32,8 @@ age = @user.age
 
 # Build hash
 hash = Hash.rush(binding, :name, :age)
+# symbol arguments can also be packed in an array
+hash = Hash.rush(binding, [:name, :age])
 
 # Use hash in new object instantiation
 @view_variable = GemNamespace::Class.new(hash)
