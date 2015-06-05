@@ -1,8 +1,7 @@
 # Hashrush
 
-Extends Ruby Hash class with the `.build_from_symbol_variables` method.  
+Extends Ruby Hash class with the `.rush` method (and it's long_and_expressive alias `.build_from_symbol_variables`) .  
 Use when building hashes from pre-loaded variables to avoid repetiton.
-(binding, *args)
 
 ## Installation
 
@@ -32,7 +31,7 @@ name = @user.name
 age = @user.age
 
 # Build hash
-hash = Hash.build_from_symbol_variables(binding, :name, :age)
+hash = Hash.rush(binding, :name, :age)
 
 # Use hash in new object instantiation
 @view_variable = GemNamespace::Class.new(hash)
