@@ -1,5 +1,3 @@
-require "hashrush/version"
-
 module Hashrush
 
   class ::Hash
