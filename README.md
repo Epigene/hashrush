@@ -5,7 +5,7 @@ Use when building hashes from pre-loaded variables to avoid repetiton.
 
 ## Installation
 
-`gem 'hashrush'` and `bundle`
+`gem 'hashrush', '~> 2.0.0'` and `bundle`
 
 ## Usage
 
@@ -27,13 +27,22 @@ Hashrush shortens step 2. Use like this:
 
 ```ruby
 # Pre-load values, trivialized here
-name = @user.name
-age = @user.age
+name = "Bill"
+@age = 21 # since v2
 
 # Build hash
-hash = Hash.rush(binding, :name, :age)
+hash = Hash.rush(binding, :name, :@age)
 # symbol arguments can also be packed in an array
-hash = Hash.rush(binding, [:name, :age])
+hash = Hash.rush(binding, [:name, :@age])
+# symbol arguments can also use symbol array shorthand
+hash = Hash.rush(binding,
+  %i|name @age|
+)
+
+hash
+#=> {name: "Bill", age: 21}
+
+# NB, rushing will strip the '@' from instance variables and '@@' from class variables
 
 # Use hash in new object instantiation
 @view_variable = GemNamespace::Class.new(hash)
