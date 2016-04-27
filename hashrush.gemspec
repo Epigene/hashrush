@@ -5,7 +5,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 Gem::Specification.new do |spec|
   spec.name          = "hashrush"
   spec.date          = Date.today.to_s
-  spec.version       = "2.0.0"
+  spec.version       = Hashush::VERSION
   spec.authors       = ["Epigene"]
   spec.email         = ["augusts.bautra@gmail.com"]
 
