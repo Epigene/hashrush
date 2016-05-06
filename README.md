@@ -1,7 +1,7 @@
 # Hashrush
 
 Extends Ruby Hash class with the `.rush` method (and it's long_and_expressive alias `.build_from_symbol_variables`) .  
-Use when building hashes from pre-loaded variables to avoid repetiton.
+Use when building hashes from pre-loaded variables to avoid repetition.
 
 ## Installation
 
