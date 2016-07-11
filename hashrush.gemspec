@@ -5,7 +5,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 Gem::Specification.new do |spec|
   spec.name          = "hashrush"
   spec.date          = Date.today.to_s
-  spec.version       = Hashrush::VERSION
+  spec.version       = "2.0.1"
   spec.authors       = ["Epigene"]
   spec.email         = ["augusts.bautra@gmail.com"]
 
@@ -19,6 +19,6 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.add_development_dependency "bundler", "~> 1.9"
-  spec.add_development_dependency "rake", "~> 10.0"
-  spec.add_development_dependency "rspec-rails"
+  spec.add_development_dependency "rake", "~> 10.5.0"
+  spec.add_development_dependency "rspec-rails", "~> 3.4.0"
 end
